@@ -9,6 +9,7 @@ from real_estate.form import RealEstateFrom
 from real_estate import apartment_roi as roi
 
 from calender.calender_form import CalenderFrom, CalenderFromDelete
+from portfolio_result import funcions
 #from calender.months import total
 
 from datetime import date, timedelta
@@ -120,8 +121,8 @@ def calender():
 def portfolio():
 
     nas_path = '/volume1/Python/Calculators-Website-Flask/portfolio_result/'
-    home_pc_path = r'D:\PycharmProjects\Projects\Calculators-Website-Flask\portfolio_result/'
-    laptop_path = r'C:\PycharmProjects\Projects\Calculators-Website-Flask\portfolio_result/'
+    home_pc_path = r'D:\PycharmProjects\Calculators-Website-Flask\portfolio_result/'
+    laptop_path = r'C:\PycharmProjects\Calculators-Website-Flask\portfolio_result/'
 
     '# chooses path depending on the machine that it is on'
     if os.path.isdir(home_pc_path):
@@ -132,10 +133,10 @@ def portfolio():
         path = laptop_path
 
     '#input needed is x1, y1, x2, y2, name of x and name of y'
-    chart_plot = draw_plot(str_date_to_list(Funcions.get_excel_column(path, "Portfell", 1)),
-                           Funcions.get_excel_column(path, "Portfell", 6),
-                           str_date_to_list(Funcions.get_excel_column(path, "Portfell", 1)),
-                           Funcions.get_excel_column(path, "Portfell", 8),
+    chart_plot = draw_plot(str_date_to_list(funcions.get_excel_column(path, "Portfell", 1)),
+                           funcions.get_excel_column(path, "Portfell", 6),
+                           str_date_to_list(funcions.get_excel_column(path, "Portfell", 1)),
+                           funcions.get_excel_column(path, "Portfell", 8),
                            'Ignar Portfell',
                            'Pere Portfell')
 
@@ -244,8 +245,8 @@ def work():
 if __name__ == "__main__":
 
     nas_path = '/volume1/Python/Calculators-Website-Flask/portfolio_result/'
-    home_pc_path = r'D:\PycharmProjects\Projects\Calculators-Website-Flask\portfolio_result/'
-    laptop_path = r'C:\PycharmProjects\Projects\Calculators-Website-Flask\portfolio_result/'
+    home_pc_path = r'D:\PycharmProjects\Calculators-Website-Flask\portfolio_result/'
+    laptop_path = r'C:\PycharmProjects\Calculators-Website-Flask\portfolio_result/'
 
     '# chooses debug value depending on the machine that it is on'
     if os.path.isdir(home_pc_path):

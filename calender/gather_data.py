@@ -6,8 +6,8 @@ import os
 
 
 nas_path = '/volume1/Python/Calculators-Website-Flask/'
-home_pc_path = r'D:\PycharmProjects\Projects\Calculators-Website-Flask/'
-laptop_path = r'C:\PycharmProjects\Projects\Calculators-Website-Flask/'
+home_pc_path = r'D:\PycharmProjects\Calculators-Website-Flask/'
+laptop_path = r'C:\PycharmProjects\Calculators-Website-Flask/'
 
 '# chooses debug value depending on the machine that it is on'
 if os.path.isdir(home_pc_path):
