@@ -1,7 +1,7 @@
 from flask_wtf import FlaskForm
 from wtforms import IntegerField, SubmitField
 from wtforms.validators import DataRequired, NumberRange
-from Calculators-Website-Flask.work_time import MyFloatField
+from work_time import MyFloatField
 
 
 class WorkForm(FlaskForm):

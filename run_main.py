@@ -2,24 +2,22 @@
 
 from flask import Flask, render_template, flash, request
 from flask_wtf.csrf import CSRFProtect
-from Calculators-Website-Flask.work_time.forms import WorkForm
-from Calculators-Website-Flask.work_time.work_funcions import WorkClass as Wc
+from work_time.forms import WorkForm
+from work_time.work_funcions import WorkClass as Wc
 
-from Calculators-Website-Flask.real_estate.form import RealEstateFrom
-from Calculators-Website-Flask.real_estate import apartment_roi as roi
-from Portfolio_calculator import Kinnisvara as Re
+from real_estate.form import RealEstateFrom
+from real_estate import apartment_roi as roi
 
-from Calculators-Website-Flask.calender.calender_form import CalenderFrom, CalenderFromDelete
-#from Calculators-Website-Flask.calender.months import total
+from calender.calender_form import CalenderFrom, CalenderFromDelete
+#from calender.months import total
 
 from datetime import date, timedelta
-from Calculators-Website-Flask.calender.gather_data import table_exists, create_table, insert_data, backup_to_csv, get_data_for_dropdown, delete_row
-from Calculators-Website-Flask.calender.plot import draw_plot
+from calender.gather_data import table_exists, create_table, insert_data, backup_to_csv, get_data_for_dropdown, delete_row
+from calender.plot import draw_plot
 
-from Calculators-Website-Flask.portfolio_result.portfolio_funcion import file_result_to_list, str_date_to_list
-from Portfolio_calculator import Funcions
+from portfolio_result.portfolio_funcion import file_result_to_list, str_date_to_list
 
-from Calculators-Website-Flask.calender.often_used import plot_often_calender, drop_down_often_calender
+from calender.often_used import plot_often_calender, drop_down_often_calender
 import os
 
 csrf = CSRFProtect()
