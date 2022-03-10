@@ -1,5 +1,5 @@
 # Calculators-Website-Flask
-Contains personal Calclutors or other project that are combine to one website. Mainly for personal use and experimenting.
+Contains personal calculators or other project that is combining to one website. Mainly for personal use and experimenting.
 
 ## Calender
 ![Calender](https://i.ibb.co/HV9vNCp/Calender.png)
