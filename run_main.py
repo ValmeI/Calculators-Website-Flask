@@ -133,10 +133,10 @@ def portfolio():
         path = laptop_path
 
     '#input needed is x1, y1, x2, y2, name of x and name of y'
-    chart_plot = draw_plot(str_date_to_list(funcions.get_excel_column(path, "Portfell", 1)),
-                           funcions.get_excel_column(path, "Portfell", 6),
-                           str_date_to_list(funcions.get_excel_column(path, "Portfell", 1)),
-                           funcions.get_excel_column(path, "Portfell", 8),
+    chart_plot = draw_plot(str_date_to_list(funcions.get_excel_column(path, "Portfell", 'A')),
+                           funcions.get_excel_column(path, "Portfell", 'F'),
+                           str_date_to_list(funcions.get_excel_column(path, "Portfell", 'A')),
+                           funcions.get_excel_column(path, "Portfell", 'G'),
                            'Ignar Portfell',
                            'Pere Portfell')
 
