@@ -4,3 +4,5 @@ calender/__pycache__
 portfolio_result/__pycache__
 real_estate/__pycache__
 work_time/__pycache__
+calendar_event_adder/token.pickle
+calendar_event_adder/credentials.json

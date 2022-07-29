@@ -15,6 +15,7 @@ from portfolio_result import funcions
 from datetime import date, timedelta
 from calender.gather_data import table_exists, create_table, insert_data, backup_to_csv, get_data_for_dropdown, delete_row
 from calender.plot import draw_plot
+from calendar_event_adder.add_even_google_calender import add_event_to_google_calendar
 
 from portfolio_result.portfolio_funcion import file_result_to_list, str_date_to_list
 
@@ -95,6 +96,17 @@ def calender():
                         )
             new_begin = "{:%d.%m.%Y}".format(form.beginning_date.data + days_to_add)
             text_success = 'OK - Kuupäevad lisatud. Ennustatav algus kuupäev ' + new_begin
+            # with parser it goes backwards, as months as days and days as months to google calender.
+            # for example you inpurt 3rd of Sept, in google calendar it shows as 9th of March.
+            # With form.beginning_date.data works at correctly
+            date_type_begin_date = form.beginning_date.data + days_to_add
+            # adds event to google family calendar
+            add_event_to_google_calendar(gmail_address='family11301735254534479366@group.calendar.google.com',
+                                         event_title='Kalender esimene päev',
+                                         event_start_date=date_type_begin_date,
+                                         event_end_date=date_type_begin_date
+                                         )
+
             flash(text_success, 'success')
 
             '# generate again after successful post, input needed is x1, y1, x2, y2, name of x and name of y'
