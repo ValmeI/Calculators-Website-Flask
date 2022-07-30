@@ -15,7 +15,8 @@ It will give you Error 400: redirect_uri_mismatch
 '''
 
 # get current working directory, NOTE it does not work properly on Linux OS for some reason
-working_directory = os.getcwd()
+#working_directory = os.getcwd()
+working_directory = r'D:\\PycharmProjects\\Calculators-Website-Flask'
 # add event to google calendar
 
 
@@ -32,4 +33,6 @@ def add_event_to_google_calendar(gmail_address, event_title, event_start_date, e
         minutes_before_email_reminder=1440  # 24Hrs before
     )
 
+    # 7 days before in minutes
+    event.add_email_reminder(minutes_before_start=10080)
     calendar.add_event(event)
