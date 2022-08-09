@@ -267,6 +267,9 @@ if __name__ == "__main__":
         debug_value = False
     elif os.path.isdir(laptop_path):
         debug_value = True
+    else:
+        # when running in WSL (Windows Subsystem Linux)
+        debug_value = True
 
     '# 0.0.0.0 = localhost and False for NAS'
     app.run(host='0.0.0.0', port=9090, debug=debug_value)
