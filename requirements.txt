@@ -1,0 +1,5 @@
+WTForms==2.3.3
+openpyxl
+python-dateutil
+plotly
+gcsa
