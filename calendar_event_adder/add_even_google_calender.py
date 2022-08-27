@@ -36,3 +36,5 @@ def add_event_to_google_calendar(gmail_address, event_title, event_start_date, e
     # 7 days before in minutes
     event.add_email_reminder(minutes_before_start=10080)
     calendar.add_event(event)
+
+#add_event_to_google_calendar('ignarvalme@gmail.com', 'event_title', '27.08.2022', '27.08.2022')
